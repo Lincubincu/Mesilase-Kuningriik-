@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mee Müük - Sinu Mesila</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Sinu Mesila - Puhas Eesti Mesi</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Avaleht</a></li>
+                    <li><a href="tooted.html">Tooted</a></li>
+                    <li><a href="meist.html">Meist</a></li>
+                    <li><a href="galerii.html">Galerii</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                    <li><a href="kkk.html">KKK</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <h2>Tere tulemast Sinu Mesilasse!</h2>
+                <p>Pakume kvaliteetset ja maitsvat Eesti mett otse mesilast.</p>
+                <a href="tooted.html" class="button">Vaata tooteid</a>
+            </div>
+        </section>
+
+        <section id="about-us-preview">
+            <div class="container">
+                <h3>Meie lugu</h3>
+                <p>Meie kirg mesinduse vastu on kestnud põlvkondi. Kasvatame mesilasi armastuse ja hoolikusega, et pakkuda teile parimat mett.</p>
+                <a href="meist.html" class="button">Loe edasi</a>
+            </div>
+        </section>
+
+        <section id="featured-products">
+            <div class="container">
+                <h3>Populaarsed tooted</h3>
+                <div class="product-grid">
+                    <div class="product-item">
+                        <img src="https://via.placeholder.com/200x200?text=Mesi+1" alt="Mesi 1">
+                        <h4>Metsamesi</h4>
+                        <p>500g purk</p>
+                        <span class="price">8.50 €</span>
+                        <button class="add-to-cart-button">Lisa korvi</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="https://via.placeholder.com/200x200?text=Mesi+2" alt="Mesi 2">
+                        <h4>Nõmmemesi</h4>
+                        <p>1kg purk</p>
+                        <span class="price">15.00 €</span>
+                        <button class="add-to-cart-button">Lisa korvi</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Sinu Mesila. Kõik õigused kaitstud.</p>
+        </div>
+    </footer>
+</body>
+</html>
+Kerida lehekülje alla ja klõpsa "Commit new file".
+
+2.2. style.css faili loomine
+Mine tagasi oma hoidlasse.
+
+Klõpsa uuesti "Add file" ja vali "Create new file".
+
+Anna failile nimeks style.css.
+
+Kopeeri ja kleebi allolev kood style.css faili sisusse:
+
+CSS
+
+/* Üldised stiilid ja kergesti muudetavad värvid */
+:root {
+    --primary-color: #f0c300; /* Mesilase kollane */
+    --secondary-color: #333; /* Teksti värv */
+    --background-color: #f9f9f9; /* Hele taust */
+    --text-color: #555;
+    --header-footer-bg: #222;
+    --button-bg: var(--primary-color);
+    --button-text: #fff;
+    --border-color: #eee;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+/* Päis */
+header {
+    background: var(--header-footer-bg);
+    color: #fff;
+    padding-top: 20px;
+    min-height: 70px;
+    border-bottom: var(--primary-color) 3px solid;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+        font-size: 16px;
+}
+
+header ul {
+    padding: 0;
+    list-style: none;
+}
+
+header li {
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header h1 {
+    float: left;
+    margin: 0;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header .current a {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Hero sektsioon */
+#hero {
+    min-height: 400px;
+    background: url('https://via.placeholder.com/1500x400?text=Mesi+Banner') no-repeat center center/cover;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#hero h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.button {
+    display: inline-block;
+    color: var(--button-text);
+    background: var(--button-bg);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #d1a600; /* Tumendatud kollane */
+}
+
+/* Sektsioonide üldised stiilid */
+section {
+    padding: 40px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+section h3 {
+    color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Tooted */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.product-item {
+      background: #fff;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.product-item h4 {
+    margin: 10px 0;
+    color: var(--secondary-color);
+}
+
+.product-item .price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.add-to-cart-button {
+    background-color: #28a745; /* Roheline nupp */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-button:hover {
+    background-color: #218838;
+}
+
+/* Jalus */
+footer {
+    background: var(--header-footer-bg);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsiveness (mobiilivaade) */
+@media (max-width: 768px) {
+    header h1,
+    header nav {
+        float: none;
+        text-align: center;
+    }
+
+    header ul {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    header li {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    #hero h2 {
+        font-size: 2.2em;
+    }
+}
+```
